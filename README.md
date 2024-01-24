@@ -8,7 +8,7 @@ RDM figure generation in rdm_graphs.py can be used with your own saved activatio
 ```pip install requirements.txt```
 
 ## Usage
-Load a model into ```prune_retrain_compressed.py```. In this script, we use a compressed version of VGG19 trained on CIFAR10. This model and data are provided in the engine but any CNN model may be used. Hyperparameters such as how many steps of degeneration (num_injury_steps) and the percent of weights to ablate in one step (percent_to_injure) may be adjusted. 
+Load a model into ```prune_retrain_compressed.py```. In this script, we use our own compressed version of VGG19 trained on CIFAR10. However, original VGG19 and data are provided in the engine but any CNN model may be used. Hyperparameters such as how many steps of degeneration (num_injury_steps) and the percent of weights to ablate in one step (percent_to_injure) may be adjusted. 
 
 The full model is evaluated and activations from the penultimate layer are stored and sorted into a dictionary according to their class. 
 
