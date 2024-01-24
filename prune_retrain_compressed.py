@@ -210,7 +210,7 @@ for i in range(num_injury_steps):
     corr_kendall = combine.corr(method='kendall')
     tau_value = corr_kendall.iat[1, 0]
     tau_pruned.append(tau_value)
-    train_model(model, train_loader, test_loader, 3, learning_rate)
+
     print('injured tau complete')
 
     # retrain model
@@ -218,6 +218,7 @@ for i in range(num_injury_steps):
 
     # test retrained model accuracy
     print('retrained')
+  
 #    retrained_path = "injured_model_paths/full_model/full_retrained_step_" + str(i) + ".pth"
 #    torch.save(model.state_dict(), retrained_path)
 
